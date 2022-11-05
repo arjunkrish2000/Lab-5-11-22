@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #redBox{
+            height:  100px;
+            width:  100px;
+            background-color:  red;
+            position: absolute;
+        }
+        #blueBox{
+            height:  100px;
+            width:  100px;
+            background-color:  blue;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="redBox"  onclick="change('r')"></div>
+    <div id="blueBox"  onclick="change('b')">
+
+    </div>
+
+    <script>
+        var a = document.getElementById("redBox");
+        var b = document.getElementById("blueBox");
+        function change(type) {
+            if(type == 'r'){
+                a.style.zIndex = 1;
+                b.style.zIndex = 0;
+            }
+            else{
+                b.style.zIndex = 1;
+                a.style.zIndex = 0;
+            }
+        }
+
+
+
+    </script>
+
+</body>
+</html>
